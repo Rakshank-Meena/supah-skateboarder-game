@@ -1,0 +1,119 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.game{
+    width: 100vw;
+    height: 100vh;
+    background: url(./gamebackground.jpg) fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow-x: hidden;
+}
+#score{
+    color: rgb(230, 236, 236);
+    width:100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: xx-large;
+    font-family: 'Amatic SC', cursive;
+}
+.boy{
+    background: url(./kisspng-skater-boy-game-skating-game-skater-2d-skater-boy-5aef6acf27d865.8597524015256398871632.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    height: 27vh;
+    width: 19vw;
+    bottom:6vh;
+    left: 8vw;
+}
+.ball{
+    height:12vh;
+    width: 12vh;
+    background: url(./Lovepik_com-401259316-cartoon-basketball.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    bottom:6vh;
+    left:90vw;
+}
+.can{
+    height:12vh;
+    width: 12vh;
+    background: url(./clipart2127518.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    bottom:6vh;
+    left:95vw;
+}
+.ballObstacle{
+    animation: obstacle 3s linear infinite;
+}
+.canObstacle{
+    animation: obstacle2 4s linear infinite;
+}
+.jumpboy{
+    animation: jump 0.7s linear;
+}
+@keyframes obstacle2{
+    0%{
+        left: 140vw;
+    }
+    100%{
+        left: -40vw;
+    }
+}
+@keyframes obstacle{
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: -40vw;
+    }
+}
+@keyframes jump {
+    0%{
+        bottom:6vh;
+    }
+    50%{
+        bottom:33vh;
+    }
+    100%{
+        bottom:6vh;
+    }
+}
+.gameOver{
+    position: absolute;
+    width: 70vw;
+    height: 70vh;
+    background-color: rgba(101, 104, 111, 0.881);
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 18vh;
+    left: 15vw;
+    visibility: hidden;
+}
+header{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15vh;
+    font-weight: bolder;
+    color: rgb(90, 8, 53);
+}
+#gameOver{
+   font-size: 10vh; 
+   font-weight: bolder;
+   font-family: 'Amatic SC', cursive;
+   
+}
